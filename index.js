@@ -13,7 +13,7 @@ app.post('/chat', async (req, res) => {
   const userMessage = req.body.message;
   try {
     const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo", // or "gpt-4" if available
+      model: "gpt-3.5-turbo",
       messages: [
         { role: "system", content: "You are a helpful assistant." },
         { role: "user", content: userMessage }
@@ -25,5 +25,10 @@ app.post('/chat', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
+// This handles GET requests to "/"
+app.get('/', (req, res) => {
+  res.send('ChatGPT Node.js backend is running.');
+});
+
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
