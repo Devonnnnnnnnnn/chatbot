@@ -1,0 +1,27 @@
+{
+  "name": "chatgpt-nodejs-bot",
+  "version": "1.0.0",
+  "description": "A simple ChatGPT-like chatbot using Node.js and OpenAI API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.19.2",
+    "openai": "^4.39.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "keywords": [
+    "chatgpt",
+    "openai",
+    "nodejs",
+    "chatbot"
+  ],
+  "author": "Devonnnnnnnnnn",
+  "license": "MIT"
+}
